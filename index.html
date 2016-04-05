@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Smoking room</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/all-js.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h1 class="bg-danger">Our Smoking room</h1>
+            <div class="row">
+                <div class=col-xs-3>
+                    <h2 class="before-log">Login to your account</h2>
+                    <h2 class="after-log hide">My account</h2>
+                </div>
+                <div class="col-xs-3">
+                    <form>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-xs-8 before-log">
+                                    <div class="control-group">
+                                        <!-- E-mail -->
+                                        <label class="control-label" for="email_log">E-mail</label>
+                                        <div class="controls">
+                                            <input type="text" id="email_log" name="email" placeholder="*enter your emal" required>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <!-- Password-->
+                                        <label class="control-label" for="password_log">Password</label>
+                                        <div class="controls">
+                                            <input type="password" id="password_log" name="password" placeholder="*enter password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <button class="btn btn-success before-log" type="submit" data-buttonact="login" style="margin: 10px;">LOGIN</button>
+                                    <button class="btn btn-info after-log hide" type="submit" data-buttonact="logout" style="margin: 10px;">LOG OUT</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class=col-xs-1>
+                    <button class="btn btn-warning go-reg" data-buttonact="gotoform" style="margin: 10px;">REGISTRATION</button>
+                </div>
+                <div class=col-xs-5>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <h2 class="bg-success">The list of posts</h2>
+            <div class="post-list" id="post-list">
+
+            </div>
+            <!-- <form>
+                <fieldset>
+                    <button class="btn btn-info crt-post">Create post</button>
+                    <div class="create-post hide">
+                        <label class="control-label" for="title">Title</label>
+                        <div class="controls">
+                            <input type="text" id="title" name="title" placeholder="title of post" class="input-xlarge"  required>
+                        </div>
+                        <label class="control-label" for="content_post">Content</label>
+                        <div class="controls">
+                            <textarea id="content_post" rows="5" cols="45" name="text" placeholder="enter the text of post"></textarea>
+                        </div>
+                        <button id="publish_post" class="btn-success" style="margin: 10px;">Publish a post</button>
+                    </div>
+                    </fieldset>
+                </form> -->
+            <form id="add-comment" style="display:none">
+                <fieldset>
+                    <div class="create-comments">
+                        <label class="control-label" for="content_comments">Content</label>
+                        <div class="controls">
+                            <textarea id="content_comments" rows="2" cols="45" name="text" placeholder="enter the text of comments"></textarea>
+                        </div>
+                        <button id="send_comm" class="btn-success" style="margin: 10px;">Send Comment</button>
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
